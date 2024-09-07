@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView, Alert } from "react-native";
+import { useState } from "react";
 import Greeting from "./components/Greeting";
 import UserDetails from "./components/UserDetails";
 import Task from "./components/Task";
@@ -9,7 +10,9 @@ import ClickCounter from "./components/ClickCounter";
 import RegistrationForm from "./components/RegistrationForm";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import AlertButton from "./components/AlertButton";
-import { useState } from "react";
+import ParentCounter from "./components/ParentCounter";
+import ImageGallery from "./components/ImageGallery";
+import Game from "./components/Game";
 
 export default function App() {
   //formulario de registro
@@ -52,7 +55,10 @@ export default function App() {
           <Text style={dynamicStyles.text}>Tema actual: {theme}</Text>
           <ThemeSwitcher onToggleTheme={toggleTheme} />
         </View>*/}
-        <AlertButton showAlert={showAlert} />
+        {/*<AlertButton onPress={showAlert} />*/}
+        {/*<ParentCounter />*/}
+        {/*<ImageGallery />*/}
+        <Game />
       </SafeAreaView>
     </View>
   );
